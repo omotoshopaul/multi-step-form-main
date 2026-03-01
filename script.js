@@ -1,7 +1,7 @@
 const step_1 = document.getElementById("step_1");   
 const step_2 = document.getElementById("step_2");
 const step_3 = document.getElementById("step_3");   
-const step_4 = document.getElementById("step_4");
+// const step_4 = document.getElementById("step_4");
 const your_info = document.getElementById("your_info");
 const your_plan = document.getElementById("your_plan");
 const add_ons = document.getElementById("add_ons");
@@ -51,50 +51,50 @@ step_1.addEventListener("click", () => {
     step_2.classList.add("border", "border-gray-100", "text-gray-100");
     step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
     step_3.classList.add("border", "border-gray-100", "text-gray-100");
-    step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-    step_4.classList.add("border", "border-gray-100", "text-gray-100");
-     if (arcade_container.classList.contains("border-gray-300") && advanced_container.classList.contains("border-gray-300") && pro_container.classList.contains("border-gray-300")) {
-        alert("Please select a plan.");
-        your_info.classList.add("hidden");
-        add_ons.classList.add("hidden");
-        your_plan.classList.remove("hidden");
-        step_2.classList.add("bg-blue-200", "text-gray-700");
-        step_2.classList.remove("border", "border-gray-100", "text-gray-100");
-        step_1.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_1.classList.add("border", "border-gray-100", "text-gray-100");
-        step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_3.classList.add("border", "border-gray-100", "text-gray-100");
-        step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_4.classList.add("border", "border-gray-100", "text-gray-100");
-        return;
-    }
-      else {
-        your_info.classList.remove("hidden");
-        add_ons.classList.add("hidden");
-        your_plan.classList.add("hidden"); 
-        step_1.classList.add("bg-blue-200", "text-gray-700", "border-0");
-        step_1.classList.remove("border", "border-gray-100", "text-gray-100"); 
-        step_2.classList.remove("bg-blue-200", "text-gray-700");
-        step_2.classList.add("border", "border-gray-100", "text-gray-100");
-        step_3.classList.remove("bg-blue-200", "text-gray-700");
-        step_3.classList.add("border", "border-gray-100", "text-gray-100");
-        step_4.classList.remove("bg-blue-200", "text-gray-700");
-        step_4.classList.add("border", "border-gray-100", "text-gray-100");
-      };
+    // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+    // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+    //  if (arcade_container.classList.contains("border-gray-300") && advanced_container.classList.contains("border-gray-300") && pro_container.classList.contains("border-gray-300")) {
+    //     alert("Please select a plan.");
+    //     your_info.classList.add("hidden");
+    //     add_ons.classList.add("hidden");
+    //     your_plan.classList.remove("hidden");
+    //     step_2.classList.add("bg-blue-200", "text-gray-700");
+    //     step_2.classList.remove("border", "border-gray-100", "text-gray-100");
+    //     step_1.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+    //     step_1.classList.add("border", "border-gray-100", "text-gray-100");
+    //     step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+    //     step_3.classList.add("border", "border-gray-100", "text-gray-100");
+    //     // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+    //     // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+    //     return;
+    // }
+    //   else {
+    //     your_info.classList.remove("hidden");
+    //     add_ons.classList.add("hidden");
+    //     your_plan.classList.add("hidden"); 
+    //     step_1.classList.add("bg-blue-200", "text-gray-700", "border-0");
+    //     step_1.classList.remove("border", "border-gray-100", "text-gray-100"); 
+    //     step_2.classList.remove("bg-blue-200", "text-gray-700");
+    //     step_2.classList.add("border", "border-gray-100", "text-gray-100");
+    //     step_3.classList.remove("bg-blue-200", "text-gray-700");
+    //     step_3.classList.add("border", "border-gray-100", "text-gray-100");
+    //     // step_4.classList.remove("bg-blue-200", "text-gray-700");
+    //     // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+    //   };
 });
 
 step_2.addEventListener("click", () => {
-    your_info.classList.add("hidden");   
-    your_plan.classList.remove("hidden");
-    add_ons.classList.add("hidden");  
-    step_1.classList.remove("bg-blue-200", "text-gray-700");
-    step_1.classList.add("border", "border-gray-100", "text-gray-100");
-    step_2.classList.add("bg-blue-200", "text-gray-700", "border-0");
-    step_2.classList.remove("border", "border-gray-100", "text-gray-100");
-    step_3.classList.remove("bg-blue-200", "text-gray-700");
-    step_3.classList.add("border", "border-gray-100", "text-gray-100");
-    step_4.classList.remove("bg-blue-200", "text-gray-700");
-    step_4.classList.add("border", "border-gray-100", "text-gray-100");
+    // your_info.classList.add("hidden");   
+    // your_plan.classList.remove("hidden");
+    // add_ons.classList.add("hidden");  
+    // step_1.classList.remove("bg-blue-200", "text-gray-700");
+    // step_1.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_2.classList.add("bg-blue-200", "text-gray-700", "border-0");
+    // step_2.classList.remove("border", "border-gray-100", "text-gray-100");
+    // step_3.classList.remove("bg-blue-200", "text-gray-700");
+    // step_3.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_4.classList.remove("bg-blue-200", "text-gray-700");
+    // step_4.classList.add("border", "border-gray-100", "text-gray-100");
     arcade_container.classList.remove("border-blue-500", "bg-blue-50");
     advanced_container.classList.remove("border-blue-500", "bg-blue-50");
     pro_container.classList.remove("border-blue-500", "bg-blue-50");
@@ -112,8 +112,8 @@ step_2.addEventListener("click", () => {
         step_2.classList.add("border", "border-gray-100", "text-gray-100");
         step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
         step_3.classList.add("border", "border-gray-100", "text-gray-100");
-        step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_4.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
         return;
      }
      else {
@@ -126,23 +126,23 @@ step_2.addEventListener("click", () => {
         step_1.classList.add("border", "border-gray-100", "text-gray-100");
         step_1.classList.remove("bg-blue-200", "text-gray-700", "border-0");
         step_1.classList.add("border", "border-gray-100", "text-gray-100");
-        step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_4.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
      };
 });
 
 step_3.addEventListener("click", () => {
-    add_ons.classList.remove("hidden");
-    your_info.classList.add("hidden");  
-    your_plan.classList.add("hidden");
-    step_1.classList.remove("bg-blue-200", "text-gray-700");
-    step_1.classList.add("border", "border-gray-100", "text-gray-100");
-    step_3.classList.add("bg-blue-200", "text-gray-700", "border-0");
-    step_3.classList.remove("border", "border-gray-100", "text-gray-100");
-    step_2.classList.remove("bg-blue-200", "text-gray-700");
-    step_2.classList.add("border", "border-gray-100", "text-gray-100");
-    step_4.classList.remove("bg-blue-200", "text-gray-700");
-    step_4.classList.add("border", "border-gray-100", "text-gray-100");
+    // add_ons.classList.remove("hidden");
+    // your_info.classList.add("hidden");  
+    // your_plan.classList.add("hidden");
+    // step_1.classList.remove("bg-blue-200", "text-gray-700");
+    // step_1.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_3.classList.add("bg-blue-200", "text-gray-700", "border-0");
+    // step_3.classList.remove("border", "border-gray-100", "text-gray-100");
+    // step_2.classList.remove("bg-blue-200", "text-gray-700");
+    // step_2.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_4.classList.remove("bg-blue-200", "text-gray-700");
+    // step_4.classList.add("border", "border-gray-100", "text-gray-100");
     if (name_input.value === "" || email_input.value === "" || number_input.value === "") {
         alert("Please fill in all fields.");
         your_info.classList.remove("hidden");
@@ -154,8 +154,8 @@ step_3.addEventListener("click", () => {
         step_2.classList.add("border", "border-gray-100", "text-gray-100");
         step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
         step_3.classList.add("border", "border-gray-100", "text-gray-100");
-        step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_4.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
         return;
      }
      else {
@@ -168,41 +168,10 @@ step_3.addEventListener("click", () => {
         step_2.classList.add("border", "border-gray-100", "text-gray-100");
         step_1.classList.remove("bg-blue-200", "text-gray-700", "border-0");
         step_1.classList.add("border", "border-gray-100", "text-gray-100");
-        step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_4.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
      };
-});
-
-first_step.addEventListener("click", () => {
-    your_info.classList.add("hidden");   
-    your_plan.classList.remove("hidden");
-    add_ons.classList.add("hidden");
-    step_1.classList.remove("bg-blue-200", "text-gray-700");
-    step_1.classList.add("border", "border-gray-100", "text-gray-100");
-    step_2.classList.add("bg-blue-200", "text-gray-700", "border-0");
-     if (name_input.value === "" || email_input.value === "" || number_input.value === "") {
-        alert("Please fill in all fields.");
-        your_info.classList.remove("hidden");
-        your_plan.classList.add("hidden");
-        add_ons.classList.add("hidden");
-        step_1.classList.add("bg-blue-200", "text-gray-700");
-        step_1.classList.remove("border", "border-gray-100", "text-gray-100");
-        step_2.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_2.classList.add("border", "border-gray-100", "text-gray-100");
-        return;
-     }
-     else {
-        your_info.classList.add("hidden");
-        your_plan.classList.remove("hidden");
-        add_ons.classList.add("hidden");
-     };
-});
-
-second_step.addEventListener("click", () => {
-    add_ons.classList.remove("hidden");
-    your_info.classList.add("hidden");
-    your_plan.classList.add("hidden");
-    if (arcade_container.classList.contains("border-gray-300") && advanced_container.classList.contains("border-gray-300") && pro_container.classList.contains("border-gray-300")) {
+     if (arcade_container.classList.contains("border-gray-300") && advanced_container.classList.contains("border-gray-300") && pro_container.classList.contains("border-gray-300")) {
         alert("Please select a plan.");
         your_info.classList.add("hidden");
         add_ons.classList.add("hidden");
@@ -213,8 +182,8 @@ second_step.addEventListener("click", () => {
         step_1.classList.add("border", "border-gray-100", "text-gray-100");
         step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
         step_3.classList.add("border", "border-gray-100", "text-gray-100");
-        step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_4.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
         return;
     }
       else {
@@ -224,15 +193,104 @@ second_step.addEventListener("click", () => {
         step_2.classList.remove("bg-blue-200", "text-gray-700");
         step_2.classList.add("border", "border-gray-100", "text-gray-100");
         step_3.classList.add("bg-blue-200", "text-gray-700", "border-0");
+        step_3.classList.remove("border", "border-gray-100", "text-gray-100");
+        step_1.classList.remove("bg-blue-200", "text-gray-700");
+        step_1.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+      };
+});
+
+first_step.addEventListener("click", () => {
+    // your_info.classList.add("hidden");   
+    // your_plan.classList.remove("hidden");
+    // add_ons.classList.add("hidden");
+    // step_1.classList.remove("bg-blue-200", "text-gray-700");
+    // step_1.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_2.classList.add("bg-blue-200", "text-gray-700", "border-0");
+    // step_2.classList.remove("border", "border-gray-100", "text-gray-100");
+    // step_3.classList.remove("bg-blue-200", "text-gray-700");
+    // step_3.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_4.classList.remove("bg-blue-200", "text-gray-700");
+    // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+     if (name_input.value === "" || email_input.value === "" || number_input.value === "") {
+        alert("Please fill in all fields.");
+        your_info.classList.remove("hidden");
+        your_plan.classList.add("hidden");
+        add_ons.classList.add("hidden");
+        step_1.classList.add("bg-blue-200", "text-gray-700");
+        step_1.classList.remove("border", "border-gray-100", "text-gray-100");
+        step_2.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        step_2.classList.add("border", "border-gray-100", "text-gray-100");
+        step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        step_3.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+        return;
+     }
+     else {
+        your_info.classList.add("hidden");
+        your_plan.classList.remove("hidden");
+        add_ons.classList.add("hidden");
+        step_1.classList.remove("bg-blue-200", "text-gray-700");
+        step_1.classList.add("border", "border-gray-100", "text-gray-100");
+        step_2.classList.add("bg-blue-200", "text-gray-700", "border-0");
+        step_2.classList.remove("border", "border-gray-100", "text-gray-100");
+        step_3.classList.remove("bg-blue-200", "text-gray-700");
+        step_3.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+     };
+});
+
+second_step.addEventListener("click", () => {
+    // add_ons.classList.remove("hidden");
+    // your_info.classList.add("hidden");
+    // your_plan.classList.add("hidden");
+    // step_2.classList.remove("bg-blue-200", "text-gray-700");
+    // step_2.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_3.classList.add("bg-blue-200", "text-gray-700", "border-0");
+    // step_3.classList.remove("border", "border-gray-100", "text-gray-100");
+    // step_1.classList.remove("bg-blue-200", "text-gray-700");
+    // step_1.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_4.classList.remove("bg-blue-200", "text-gray-700");
+    // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+    if (arcade_container.classList.contains("border-gray-300") && advanced_container.classList.contains("border-gray-300") && pro_container.classList.contains("border-gray-300")) {
+        alert("Please select a plan.");
+        your_info.classList.add("hidden");
+        add_ons.classList.add("hidden");
+        your_plan.classList.remove("hidden");
+        step_2.classList.add("bg-blue-200", "text-gray-700");
+        step_2.classList.remove("border", "border-gray-100", "text-gray-100");
+        step_1.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        step_1.classList.add("border", "border-gray-100", "text-gray-100");
+        step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        step_3.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
+        return;
+    }
+      else {
+        your_info.classList.add("hidden");
+        add_ons.classList.remove("hidden");
+        your_plan.classList.add("hidden");  
+        step_2.classList.remove("bg-blue-200", "text-gray-700");
+        step_2.classList.add("border", "border-gray-100", "text-gray-100");
+        step_3.classList.add("bg-blue-200", "text-gray-700", "border-0");
+        step_3.classList.remove("border", "border-gray-100", "text-gray-100");
+        step_1.classList.remove("bg-blue-200", "text-gray-700");
+        step_1.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
       };
 });
 go_back_plan.addEventListener("click", () => {
-    your_info.classList.remove("hidden");   
-    your_plan.classList.add("hidden");
-    step_1.classList.add("bg-blue-200", "text-gray-700");
-    step_1.classList.remove("border", "border-gray-100", "text-gray-100");
-    step_2.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-    step_2.classList.add("border", "border-gray-100", "text-gray-100");
+    // your_info.classList.remove("hidden");   
+    // your_plan.classList.add("hidden");
+    // step_1.classList.add("bg-blue-200", "text-gray-700");
+    // step_1.classList.remove("border", "border-gray-100", "text-gray-100");
+    // step_2.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+    // step_2.classList.add("border", "border-gray-100", "text-gray-100");
     if (arcade_container.classList.contains("border-gray-300") && advanced_container.classList.contains("border-gray-300") && pro_container.classList.contains("border-gray-300")) {
         alert("Please select a plan.");
         your_info.classList.add("hidden");
@@ -244,8 +302,8 @@ go_back_plan.addEventListener("click", () => {
         step_1.classList.add("border", "border-gray-100", "text-gray-100");
         step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
         step_3.classList.add("border", "border-gray-100", "text-gray-100");
-        step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-        step_4.classList.add("border", "border-gray-100", "text-gray-100");
+        // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+        // step_4.classList.add("border", "border-gray-100", "text-gray-100");
         return;
     }
       else {
@@ -259,13 +317,13 @@ go_back_plan.addEventListener("click", () => {
 });
 
 go_back_add_ons.addEventListener("click", () => {
-    add_ons.classList.add("hidden");
-    your_plan.classList.remove("hidden");
-    your_info.classList.add("hidden");
-    step_2.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-    step_2.classList.add("border", "border-gray-100", "text-gray-100");
-    step_3.classList.remove("bg-blue-200", "text-gray-700");
-    step_3.classList.add("border", "border-gray-100", "text-gray-100");
+    // add_ons.classList.add("hidden");
+    // your_plan.classList.remove("hidden");
+    // your_info.classList.add("hidden");
+    // step_2.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+    // step_2.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_3.classList.remove("bg-blue-200", "text-gray-700");
+    // step_3.classList.add("border", "border-gray-100", "text-gray-100");
   if (service_container.classList.contains("border-gray-300") && storage_container.classList.contains("border-gray-300") && profile_container.classList.contains("border-gray-300")) {
     alert("Please select an add-on.");
     add_ons.classList.remove("hidden");
@@ -277,8 +335,8 @@ go_back_add_ons.addEventListener("click", () => {
     step_1.classList.add("border", "border-gray-100", "text-gray-100");
     step_2.classList.remove("bg-blue-200", "text-gray-700", "border-0");
     step_2.classList.add("border", "border-gray-100", "text-gray-100");
-    step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-    step_4.classList.add("border", "border-gray-100", "text-gray-100");
+    // step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+    // step_4.classList.add("border", "border-gray-100", "text-gray-100");
     return;
   }
   else {
@@ -291,8 +349,8 @@ go_back_add_ons.addEventListener("click", () => {
    step_1.classList.add("border", "border-gray-100", "text-gray-100");
    step_3.classList.remove("bg-blue-200", "text-gray-700", "border-0");
    step_3.classList.add("border", "border-gray-100", "text-gray-100");
-   step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
-   step_4.classList.add("border", "border-gray-100", "text-gray-100");
+  //  step_4.classList.remove("bg-blue-200", "text-gray-700", "border-0");
+  //  step_4.classList.add("border", "border-gray-100", "text-gray-100");
   };
     });
 
