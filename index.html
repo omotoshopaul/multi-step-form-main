@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/output.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+</style>
+</head>
+<body class="font-['Ubuntu']">
+  <div class="h-145 max-w-225 min-w-87.5 mx-auto mt-10 flex items-center px-4 gap-12 rounded-[10px] bg-white shadow-md border border-gray-200">
+
+    <!-- First half of the form -->
+<div class="relative">
+  <img src="multi-step-form-main/assets/images/bg-sidebar-desktop.svg" alt="Sidebar_desktop" class="h-137">
+<div class="flex flex-col px-7 gap-7 absolute top-10">
+<div class="flex gap-4">
+  <div id="step_1" class="h-7 w-7 rounded-[50%] flex items-center justify-center bg-blue-200 text-gray-700 hover:bg-blue-200 text-[14px] font-medium cursor-pointer"><p>1</p></div>
+<div class="flex flex-col">
+<p class="text-gray-300 text-[14px] font-medium">STEP 1</p>
+<p class="font-semibold text-[18px] text-gray-100">YOUR INFO</p>
+</div>
+</div>
+<div class="flex gap-4">
+  <div id="step_2" class="h-7 w-7 rounded-[50%] border border-gray-100 flex items-center justify-center text-gray-100 hover:bg-blue-200 text-[14px] font-medium cursor-pointer"><p>2</p></div>
+<div class="flex flex-col">
+<p class="text-gray-300 text-[14px] font-medium">STEP 2</p>
+<p class="font-semibold text-[18px] text-gray-100">SELECT PLAN</p>
+</div>
+</div>
+<div class="flex gap-4">
+  <div id="step_3" class="h-7 w-7 rounded-[50%] border border-gray-100 flex items-center justify-center text-gray-100 hover:bg-blue-200 text-[14px] font-medium cursor-pointer"><p>3</p></div>
+<div class="flex flex-col">
+<p class="text-gray-300 text-[14px] font-medium">STEP 3</p>
+<p class="font-semibold text-[18px] text-gray-100">ADD-ONS</p>
+</div>
+</div>
+<div class="flex gap-4">
+  <div id="step_4" class="h-7 w-7 rounded-[50%] border border-gray-100 flex items-center justify-center text-gray-100 hover:bg-blue-200 text-[14px] font-medium cursor-pointer"><p>4</p></div>
+<div class="flex flex-col">
+<p class="text-gray-300 text-[14px] font-medium">STEP 4</p>
+<p class="font-semibold text-[18px] text-gray-100">SUMMARY</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Second half of the form -->
+
+<!-- Your INFO -->
+<div id="your_info" class="flex flex-col gap-15">
+<div class="flex flex-col">
+  <p class="text-gray-700 font-semibold text-[28px]">Personal info</p>
+  <p class="text-gray-400">Please provide your name, email address and phone number.</p>
+</div>
+<div class="flex flex-col gap-3.5">
+<div class="flex flex-col">
+<p class="text-gray-700">Name</p>
+<input id="name_input" type="text" placeholder="e.g Stephen King" class="w-full h-11.5 border border-gray-400 text-gray-400 rounded-[5px] pl-2" required>
+</div>
+<div class="flex flex-col">
+<p class="text-gray-700">Email Address</p>
+<input id="email_input" type="email" placeholder="e.g stephenking@lorem.com" class="w-full h-11.5 border border-gray-400 text-gray-400 rounded-[5px] pl-2" required>
+</div>
+<div class="flex flex-col">
+<p class="text-gray-700">Phone Number</p>
+<input id="number_input" type="text" placeholder="e.g +1 234 567 890" class="w-full h-11.5 border border-gray-400 text-gray-400 rounded-[5px] pl-2" required>
+</div>
+</div>
+<div class="flex justify-end">
+<p id="first_step" class="px-3.5 py-2 rounded-[5px] bg-gray-700 text-gray-100 hover:text-white hover:bg-gray-900 transition-all duration-500 ease-in-out cursor-pointer">Next Step</p>
+</div>
+</div>
+
+<!-- Select your plan -->
+ <div id="your_plan" class="flex flex-col gap-15 hidden">
+<div class="flex flex-col">
+  <p class="text-gray-700 font-semibold text-[28px]">Select your plan</p>
+  <p class="text-gray-400">You have the option of the monthly or yearly billing.</p>
+</div>
+<div class="flex flex-col gap-5">
+  <div class="flex gap-4 items-center">
+<div id="arcade_container" class="space-y-11 py-7.5 pl-5.5 w-40 border border-gray-300 rounded-[10px] cursor-pointer hover:bg-blue-50 hover:border-blue-500 transition-all duration-200 ease-in-out">
+  <img src="multi-step-form-main/assets/images/icon-arcade.svg" alt="arcade">
+<div class="space-y-1">
+<p class="text-[18px] font-semibold">Arcade</p>
+<p id="arcade_yearly" class="text-gray-400">$90/yr</p>
+<p id="arcade_monthly" class="text-gray-400 hidden">$9/month</p>
+<p id="two_months_arcade" class="font-medium">2 months free</p>
+</div>
+</div>
+<div id="advanced_container" class="space-y-11 py-7.5 pl-5.5 w-40 border border-gray-300 rounded-[10px] cursor-pointer hover:bg-blue-50 hover:border-blue-500 transition-all duration-200 ease-in-out">
+  <img src="multi-step-form-main/assets/images/icon-advanced.svg" alt="advanced">
+<div class="space-y-1">
+<p class="text-[18px] font-semibold">Advanced</p>
+<p id="advanced_yearly" class="text-gray-400">$120/yr</p>
+<p id="advanced_monthly" class="text-gray-400 hidden">$12/month</p>
+<p id="two_months_advanced" class="font-medium">2 months free</p>
+</div>
+</div>
+<div id="pro_container" class="space-y-11 py-7.5 pl-5.5 w-40 border border-gray-300 rounded-[10px] cursor-pointer hover:bg-blue-50 hover:border-blue-500 transition-all duration-200 ease-in-out">
+  <img src="multi-step-form-main/assets/images/icon-pro.svg" alt="pro">
+<div class="space-y-1">
+<p class="text-[18px] font-semibold">Pro</p>
+<p id="pro_yearly" class="text-gray-400">$150/yr</p>
+<p id="pro_monthly" class="text-gray-400 hidden">$15/month</p>
+<p id="two_months_pro" class="font-medium">2 months free</p>
+</div>
+</div>
+</div>
+<div class="w-full h-13 rounded-[5px] bg-gray-100 flex justify-center items-center gap-4">
+<p id="monthly" class="font-semibold text-gray-400">Monthly</p>
+<div id="monthly_toggle" class="h-5 w-10 pl-0.75 rounded-[10px] bg-gray-700 flex items-center cursor-pointer hidden group hover:bg-gray-600 transition-all duration-200 ease-in-out"><div class="h-3.5 w-3.5 rounded-[50%] bg-white group-hover:bg-gray-100"></div></div>
+<div id="yearly_toggle" class="h-5 w-10 pl-5.75 rounded-[10px] bg-gray-700 flex items-center cursor-pointer group hover:bg-gray-600 transition-all duration-200 ease-in-out"><div class="h-3.5 w-3.5 rounded-[50%] bg-white group-hover:bg-gray-100"></div></div>
+<p id="yearly" class="font-semibold text-gray-700">Yearly</p>
+</div>
+</div>
+<div class=" flex justify-between">
+  <p id="go_back_plan" class="text-gray-400 cursor-pointer hover:text-gray-700 transition-all duration-300">Go Back</p>
+<p id="second_step" class="px-3.5 py-2 rounded-[5px] bg-gray-700 text-gray-100 hover:text-white hover:bg-gray-900 transition-all duration-300 ease-in-out cursor-pointer">Next Step</p>
+</div>
+</div>
+
+<!-- Add - Ons -->
+<div id="add_ons" class="flex flex-col gap-15 hidden">
+<div class="flex flex-col">
+  <p class="text-gray-700 font-semibold text-[28px]">Pick add-ons</p>
+  <p class="text-gray-400">Add-ons help enhance your gaming experience.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div id="service_container" class="flex justify-between items-center h-18 w-110 px-2.5 rounded-[5px] border border-gray-300 group hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all duration-200 ease-in-out">
+<div class="flex items-center gap-4">
+<div class="h-5 w-5 rounded-[5px] flex items-center justify-center border border-gray-300 group-hover:border-blue-500 group-hover:bg-blue-200">
+<img src="multi-step-form-main/assets/images/icon-checkmark.svg" alt="checkmark" class="h-3 w-3">
+</div>
+<div class="flex flex-col gap-[-2px]">
+<p class="text-gray-700 text-[18px] font-semibold">Online Service</p>
+<p class="text-gray-300">Access to multiplayer games</p>
+</div>
+</div>
+<p id="service_yr" class="text-blue-500 text-[18px font-medium]">+$10/yr</p>
+<p id="service_mo" class="text-blue-500 text-[18px font-medium] hidden">+$1/mo</p>
+</div>
+<div id="storage_container" class="flex justify-between items-center h-18 w-110 px-2.5 rounded-[5px] border border-gray-300 group hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all duration-200 ease-in-out">
+<div class="flex items-center gap-4">
+<div class="h-5 w-5 rounded-[5px] flex items-center justify-center border border-gray-300 group-hover:border-blue-500 group-hover:bg-blue-200">
+<img src="multi-step-form-main/assets/images/icon-checkmark.svg" alt="checkmark" class="h-3 w-3">
+</div>
+<div class="flex flex-col gap-[-2px]">
+<p class="text-gray-700 text-[18px] font-semibold">Larger storage</p>
+<p class="text-gray-300">Extra 1TB of storage</p>
+</div>
+</div>
+<p id="storage_yr" class="
+text-blue-500 text-[18px font-medium]">+$20/yr</p>
+<p id="storage_mo" class="
+text-blue-500 text-[18px font-medium] hidden">+$2/mo</p>
+</div>
+<div id="profile_container" class="flex justify-between items-center h-18 w-110 px-2.5 rounded-[5px] border border-gray-300 group hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all duration-200 ease-in-out">
+<div class="flex items-center gap-4">
+<div class="h-5 w-5 rounded-[5px] flex items-center justify-center border border-gray-300 group-hover:border-blue-500 group-hover:bg-blue-200">
+<img src="multi-step-form-main/assets/images/icon-checkmark.svg" alt="checkmark" class="h-3 w-3">
+</div>
+<div class="flex flex-col gap-[-2px]">
+<p class="text-gray-700 text-[18px] font-semibold">Customizable profile</p>
+<p class="text-gray-300">Custom theme on your profile</p>
+</div>
+</div>
+<p id="profile_yr" class="
+text-blue-500 text-[18px font-medium]">+$20/yr</p>
+<p id="profile_mo" class="
+text-blue-500 text-[18px font-medium] hidden">+$2/mo</p>
+</div>
+</div>
+<div class=" flex justify-between">
+  <p id="go_back_add_ons" class="text-gray-400 cursor-pointer hover:text-gray-700 transition-all duration-300">Go Back</p>
+<p id="third_step" class="px-3.5 py-2 rounded-[5px] bg-gray-700 text-gray-100 hover:text-white hover:bg-gray-900 transition-all duration-300 ease-in-out cursor-pointer">Next Step</p>
+</div>
+</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
