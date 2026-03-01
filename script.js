@@ -6,6 +6,7 @@ const step_4 = document.getElementById("step_4");
 const your_info = document.getElementById("your_info");
 const your_plan = document.getElementById("your_plan");
 const add_ons   = document.getElementById("add_ons");
+const summary   = document.getElementById("summary");
 
 const name_input   = document.getElementById("name_input");
 const email_input  = document.getElementById("email_input");
@@ -34,6 +35,8 @@ const fourth_step = document.getElementById("fourth_step");
 
 const go_back_plan    = document.getElementById("go_back_plan");
 const go_back_add_ons = document.getElementById("go_back_add_ons");
+const go_back_summary = document.getElementById("go_back_summary");
+const change_plan       = document.getElementById("change_plan");
 
 const arcade_container   = document.getElementById("arcade_container");
 const advanced_container = document.getElementById("advanced_container");
@@ -42,6 +45,10 @@ const pro_container      = document.getElementById("pro_container");
 const service_container = document.getElementById("service_container");
 const storage_container = document.getElementById("storage_container");
 const profile_container = document.getElementById("profile_container");
+
+const check_1 = document.getElementById("check_1");
+const check_2 = document.getElementById("check_2");
+const check_3 = document.getElementById("check_3");
 
 const service_yr = document.getElementById("service_yr");
 const service_mo = document.getElementById("service_mo");
@@ -52,7 +59,7 @@ const profile_mo = document.getElementById("profile_mo");
 
 let currentStep = 1;
 
-const stepSections = [null, your_info, your_plan, add_ons];
+const stepSections = [null, your_info, your_plan, add_ons, summary];
 const stepDots     = [null, step_1, step_2, step_3, step_4];
 
 /**
@@ -166,6 +173,14 @@ go_back_add_ons.addEventListener("click", () => {
   showStep(2);
 });
 
+go_back_summary.addEventListener("click", () => {
+  showStep(3);
+});
+
+change_plan.addEventListener("click", () => {
+  showStep(2);
+});
+
 const planContainers = [arcade_container, advanced_container, pro_container];
 
 function selectPlan(selected) {
@@ -239,8 +254,9 @@ monthly_toggle.addEventListener("click", () => {
 });
 
 const addOnContainers = [service_container, storage_container, profile_container];
+const checks = [check_1, check_2, check_3];
 
-function toggleAddOn(selected) {
+function toggleAddOn(selected, check) {
   const isActive = selected.classList.contains("border-blue-500");
 
   if (isActive) {
@@ -249,16 +265,20 @@ function toggleAddOn(selected) {
       "border-gray-300", "hover:bg-blue-50", "hover:border-blue-500",
       "transition-all", "duration-200", "ease-in-out"
     );
+    check.classList.remove("bg-blue-500", "border-blue-500");
+    check.classList.add("border-gray-300");
   } else {
     selected.classList.add("border-blue-500", "bg-blue-50");
     selected.classList.remove(
       "border-gray-300", "hover:bg-blue-50", "hover:border-blue-500"
     );
+    check.classList.add("bg-blue-500", "border-blue-500");
+    check.classList.remove("border-gray-300");
   }
 }
 
-service_container.addEventListener("click", () => toggleAddOn(service_container));
-storage_container.addEventListener("click", () => toggleAddOn(storage_container));
-profile_container.addEventListener("click", () => toggleAddOn(profile_container));
+service_container.addEventListener("click", () => toggleAddOn(service_container, check_1));
+storage_container.addEventListener("click", () => toggleAddOn(storage_container, check_2));
+profile_container.addEventListener("click", () => toggleAddOn(profile_container, check_3));
 
 showStep(1);
