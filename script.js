@@ -1,7 +1,3 @@
-// ─────────────────────────────────────────────
-//  ELEMENT REFS
-// ─────────────────────────────────────────────
-
 const step_1 = document.getElementById("step_1");
 const step_2 = document.getElementById("step_2");
 const step_3 = document.getElementById("step_3");
@@ -54,29 +50,19 @@ const storage_mo = document.getElementById("storage_mo");
 const profile_yr = document.getElementById("profile_yr");
 const profile_mo = document.getElementById("profile_mo");
 
-
-// ─────────────────────────────────────────────
-//  CENTRAL STATE
-// ─────────────────────────────────────────────
-
 let currentStep = 1;
 
-const stepSections = [null, your_info, your_plan, add_ons]; // index 0 unused; step 4 (summary) can be added here
+const stepSections = [null, your_info, your_plan, add_ons];
 const stepDots     = [null, step_1, step_2, step_3, step_4];
 
-
-// ─────────────────────────────────────────────
-//  CORE ROUTING — single source of truth
-// ─────────────────────────────────────────────
-
 /**
- * Show a given step, hide all others, and update sidebar dot styling.
+ * 
  * @param {number} step  1 | 2 | 3 | 4
  */
+
 function showStep(step) {
   currentStep = step;
 
-  // Show / hide content sections
   stepSections.forEach((section, i) => {
     if (!section) return;
     if (i === step) {
@@ -86,7 +72,6 @@ function showStep(step) {
     }
   });
 
-  // Update sidebar dots
   stepDots.forEach((dot, i) => {
     if (!dot) return;
     if (i === step) {
@@ -98,11 +83,6 @@ function showStep(step) {
     }
   });
 }
-
-
-// ─────────────────────────────────────────────
-//  VALIDATION — one function per step
-// ─────────────────────────────────────────────
 
 function validateStep1() {
   if (!name_input.value.trim() || !email_input.value.trim() || !number_input.value.trim()) {
@@ -141,13 +121,6 @@ function validateStep3() {
   return true;
 }
 
-
-// ─────────────────────────────────────────────
-//  SIDEBAR DOT NAVIGATION
-//  Dots only navigate backward, or to an already-completed step.
-//  Tapping a future step first validates all prior steps.
-// ─────────────────────────────────────────────
-
 step_1.addEventListener("click", () => {
   showStep(1);
 });
@@ -170,34 +143,20 @@ step_4.addEventListener("click", () => {
   showStep(4);
 });
 
-
-// ─────────────────────────────────────────────
-//  NEXT STEP BUTTONS
-// ─────────────────────────────────────────────
-
-// Step 1 → Step 2
 first_step.addEventListener("click", () => {
   if (!validateStep1()) return;
   showStep(2);
 });
 
-// Step 2 → Step 3
 second_step.addEventListener("click", () => {
   if (!validateStep2()) return;
   showStep(3);
-});
+}); 
 
-// Step 3 → Step 4
 third_step.addEventListener("click", () => {
   if (!validateStep3()) return;
   showStep(4);
 });
-
-
-// ─────────────────────────────────────────────
-//  GO BACK BUTTONS
-//  "Go Back" never validates — it always goes back one step.
-// ─────────────────────────────────────────────
 
 go_back_plan.addEventListener("click", () => {
   showStep(1);
@@ -206,11 +165,6 @@ go_back_plan.addEventListener("click", () => {
 go_back_add_ons.addEventListener("click", () => {
   showStep(2);
 });
-
-
-// ─────────────────────────────────────────────
-//  PLAN SELECTION  (arcade / advanced / pro)
-// ─────────────────────────────────────────────
 
 const planContainers = [arcade_container, advanced_container, pro_container];
 
@@ -235,11 +189,6 @@ function selectPlan(selected) {
 arcade_container.addEventListener("click",   () => selectPlan(arcade_container));
 advanced_container.addEventListener("click", () => selectPlan(advanced_container));
 pro_container.addEventListener("click",      () => selectPlan(pro_container));
-
-
-// ─────────────────────────────────────────────
-//  BILLING TOGGLE  (yearly ↔ monthly)
-// ─────────────────────────────────────────────
 
 yearly_toggle.addEventListener("click", () => {
   arcade_yearly.classList.add("hidden");
@@ -289,26 +238,18 @@ monthly_toggle.addEventListener("click", () => {
   profile_yr.classList.remove("hidden");
 });
 
-
-// ─────────────────────────────────────────────
-//  ADD-ON SELECTION  (service / storage / profile)
-//  Each add-on can be toggled independently.
-// ─────────────────────────────────────────────
-
 const addOnContainers = [service_container, storage_container, profile_container];
 
 function toggleAddOn(selected) {
   const isActive = selected.classList.contains("border-blue-500");
 
   if (isActive) {
-    // Deselect
     selected.classList.remove("border-blue-500", "bg-blue-50");
     selected.classList.add(
       "border-gray-300", "hover:bg-blue-50", "hover:border-blue-500",
       "transition-all", "duration-200", "ease-in-out"
     );
   } else {
-    // Select
     selected.classList.add("border-blue-500", "bg-blue-50");
     selected.classList.remove(
       "border-gray-300", "hover:bg-blue-50", "hover:border-blue-500"
@@ -319,10 +260,5 @@ function toggleAddOn(selected) {
 service_container.addEventListener("click", () => toggleAddOn(service_container));
 storage_container.addEventListener("click", () => toggleAddOn(storage_container));
 profile_container.addEventListener("click", () => toggleAddOn(profile_container));
-
-
-// ─────────────────────────────────────────────
-//  INIT — ensure correct starting state
-// ─────────────────────────────────────────────
 
 showStep(1);
