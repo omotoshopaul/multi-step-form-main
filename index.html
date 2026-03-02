@@ -190,24 +190,70 @@ text-blue-500 text-[18px font-medium] hidden">+$2/mo</p>
   <div class="py-6 px-4.5 w-120 rounded-[5px] bg-blue-50 flex  flex-col gap-5">
 <div class="flex justify-between items-center">
   <div class="flex flex-col">
-<p class="text-[18px] text-gray-700 font-semibold">Arcade (Yearly)</p>
+<p id="arcade_yrly" class="text-[18px] text-gray-700 font-semibold hidden">Arcade (Yearly)</p>
+<p id="arcade_mthly" class="text-[18px] text-gray-700 font-semibold hidden">Arcade (Monthly)</p>
+<p id="advanced_yrly" class="text-[18px] text-gray-700 font-semibold hidden">Advanced (Yearly)</p>
+<p id="advanced_mthly" class="text-[18px] text-gray-700 font-semibold hidden">Advanced (Monthly)</p>
+<p id="pro_yrly" class="text-[18px] text-gray-700 font-semibold hidden">Pro (Yearly)</p>
+<p id="pro_mthly" class="text-[18px] text-gray-700 font-semibold hidden">Pro (Monthly)</p>
 <p id="change_plan" class="underline decoration-gray-400 text-gray-400 cursor-pointer">Change</p>
   </div>
-  <p class="text-[18px] text-gray-700 font-semibold">$90/yr</p>
+  <p id="arcade_yrly_price" class="text-[18px] text-gray-700 font-semibold hidden">$90/yr</p>
+  <p id="arcade_mthly_price" class="text-[18px] text-gray-700 font-semibold hidden">$9/mo</p>
+  <p id="advanced_yrly_price" class="text-[18px] text-gray-700 font-semibold hidden">$120/yr</p>
+  <p id="advanced_mthly_price" class="text-[18px] text-gray-700 font-semibold hidden">$12/mo</p>
+  <p id="pro_yrly_price" class="text-[18px] text-gray-700 font-semibold hidden">$150/yr</p>
+  <p id="pro_mthly_price" class="text-[18px] text-gray-700 font-semibold hidden">$15/mo</p>
 </div>
 <div class="h-[0.5px] w-full bg-gray-300"></div>
-<div class="flex justify-between items-center">
+<div id="online_year_flex" class="flex justify-between items-center hidden">
   <p class="text-gray-400">Online-service</p>
   <p class="text-gray-700">$+10/yr</p>
 </div>
-<div class="flex justify-between items-center">
+<div id="online_month_flex" class="flex justify-between items-center hidden">
+  <p class="text-gray-400">Online-service</p>
+  <p class="text-gray-700">$+1/mo</p>
+</div>
+<div id="storage_year_flex" class="flex justify-between items-center hidden">
   <p class="text-gray-400">Larger storage</p>
   <p class="text-gray-700">$+20/yr</p>
 </div>
+<div id="storage_month_flex" class="flex justify-between items-center hidden">
+  <p class="text-gray-400">Larger storage</p>
+  <p class="text-gray-700">$+2/mo</p>
+</div>
+<div id="profile_year_flex" class="flex justify-between items-center hidden">
+  <p class="text-gray-400">Customizable profile</p>
+  <p class="text-gray-700">$+20/yr</p>
+</div>
+<div id="profile_month_flex" class="flex justify-between items-center hidden">
+  <p class="text-gray-400">Customizable profile</p>
+  <p class="text-gray-700">$+2/mo</p>
+</div>
   </div>
   <div class="px-4.5 flex justify-between items-center">
-    <p class="text-gray-400">Total (per year)</p>
-    <p class="text-blue-500 font-semibold">$120/yr</p>
+  <p id="total_per_year" class="text-gray-400 hidden">Total (per year)</p>
+  <p id="total_per_month" class="text-gray-400 hidden">Total (per month)</p>
+  <p id="total_100" class="text-blue-500 font-semibold hidden">$100/yr</p>
+  <p id="total_110" class="text-blue-500 font-semibold hidden">$110/yr</p>
+  <p id="total_120" class="text-blue-500 font-semibold hidden">$120/yr</p>
+  <p id="total_130" class="text-blue-500 font-semibold hidden">$130/yr</p>
+  <p id="total_140" class="text-blue-500 font-semibold hidden">$140/yr</p>
+  <p id="total_150" class="text-blue-500 font-semibold hidden">$150/yr</p>
+  <p id="total_160" class="text-blue-500 font-semibold hidden">$160/yr</p>
+  <p id="total_170" class="text-blue-500 font-semibold hidden">$170/yr</p>
+  <p id="total_180" class="text-blue-500 font-semibold hidden">$180/yr</p>
+  <p id="total_200" class="text-blue-500 font-semibold hidden">$200/yr</p>
+  <p id="total_10" class="text-blue-500 font-semibold hidden">$10/mo</p>
+  <p id="total_11" class="text-blue-500 font-semibold hidden">$11/mo</p>
+  <p id="total_12" class="text-blue-500 font-semibold hidden">$12/mo</p>
+  <p id="total_13" class="text-blue-500 font-semibold hidden">$13/mo</p>
+  <p id="total_14" class="text-blue-500 font-semibold hidden">$14/mo</p>
+  <p id="total_15" class="text-blue-500 font-semibold hidden">$15/mo</p>
+  <p id="total_16" class="text-blue-500 font-semibold hidden">$16/mo</p>
+  <p id="total_17" class="text-blue-500 font-semibold hidden">$17/mo</p>
+  <p id="total_18" class="text-blue-500 font-semibold hidden">$18/mo</p>
+  <p id="total_20" class="text-blue-500 font-semibold hidden">$20/mo</p>
   </div>
   <div class=" flex justify-between">
   <p id="go_back_summary" class="text-gray-400 cursor-pointer hover:text-gray-700 transition-all duration-300">Go Back</p>
@@ -215,6 +261,12 @@ text-blue-500 text-[18px font-medium] hidden">+$2/mo</p>
 </div>
  </div>
 
+ <!-- Thank you! -->
+ <div id="thank_you" class="flex flex-1 flex-col gap-6 hidden text-center">
+  <img src="multi-step-form-main/assets/images/icon-thank-you.svg" alt="thank_you" class="h-20 w-20 mx-auto">
+  <p class="text-gray-700 font-semibold text-4xl">Thank you!</p>
+  <p class="text-gray-400 mx-auto w-[85%]">Thanks for confirming your subscription! We hope you have fun using our platform. If you even need support, please feel free to email us at support@loremgaming.com.</p>
+ </div>
   </div>
 
   <script src="script.js"></script>
